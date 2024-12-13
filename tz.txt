@@ -1,0 +1,79 @@
+Нужно написать проект на JS, с использованием NodeJS.
+Программа подключается по адресу GET https://0a9e214d3e8e3b90efd4da86f4dcd4a9:e9a77a7980495f1b0dab47c3bb7ab1ff@shop-47237.myinsales.ru/admin/clients.json
+Пример заголовка запроса:
+headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Basic ${Buffer.from('718120769f11d35591e97844f032dc90:3c814edcfba9e29d7f5ef8d18c24467a').toString('base64')}`
+                }
+
+{ "property": { "title": "Country" } }
+Интервал между запросами 600 миллисекунд. Ответы сервера писать в консоли. NodeJS и VSCode уже установлен.
+Пример ответа сервера:
+[
+  {
+    "id": 2,
+    "email": "some-one@yandex.ru",
+    "name": "Mortimer Hant",
+    "phone": "+79162128506",
+    "created_at": "2009-03-30T04:37:32.000+04:00",
+    "updated_at": "2009-03-31T12:20:34.000+04:00",
+    "comment": null,
+    "registered": false,
+    "subscribe": true,
+    "client_group_id": null,
+    "surname": null,
+    "middlename": null,
+    "bonus_points": 0,
+    "type": "Client::Individual",
+    "correspondent_account": null,
+    "settlement_account": null,
+    "consent_to_personal_data": null,
+    "o_auth_provider": null,
+    "messenger_subscription": null,
+    "contact_name": "Mortimer Hant",
+    "progressive_discount": null,
+    "group_discount": null,
+    "ip_addr": "",
+    "fields_values": [
+
+    ],
+    "default_address": null,
+    "client_tags": [
+
+    ],
+    "full_name": "Mortimer Hant"
+  },
+  {
+    "id": 3,
+    "email": "some-one2@yandex.ru",
+    "name": "Just Man",
+    "phone": "+7(926)111-22-33",
+    "created_at": "2009-04-30T04:37:32.000+04:00",
+    "updated_at": "2009-04-30T12:20:34.000+04:00",
+    "comment": null,
+    "registered": false,
+    "subscribe": true,
+    "client_group_id": 1,
+    "surname": null,
+    "middlename": null,
+    "bonus_points": 0,
+    "type": "Client::Individual",
+    "correspondent_account": null,
+    "settlement_account": null,
+    "consent_to_personal_data": null,
+    "o_auth_provider": null,
+    "messenger_subscription": null,
+    "contact_name": "Just Man",
+    "progressive_discount": null,
+    "group_discount": "25.0",
+    "ip_addr": "",
+    "fields_values": [
+
+    ],
+    "default_address": null,
+    "client_tags": [
+
+    ],
+    "full_name": "Just Man"
+  }]
+  Полученные ответы нужно записать в csv файл.
